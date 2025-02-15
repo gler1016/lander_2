@@ -5,6 +5,8 @@ import ThemeToggle from '@/components/ThemeToggle';
 import Image from 'next/image';
 import logo from '../@content/assets/images/TheDevCasa_Logo@2x.png'
 import ServicesSection from '@/components/ServicesSection';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import ApproachSection from '@/components/ApproachSection';
 
 const Page = () => {
   return (
@@ -120,6 +122,8 @@ const Page = () => {
       />
     </div>
     <ServicesSection />
+    <WhyChooseUs />
+    <ApproachSection />
   </>
   );
 };
