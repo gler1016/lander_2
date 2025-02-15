@@ -15,34 +15,34 @@
   padding: 0;
 }
 
-body {
-  font-family: $typography-fontFamily-main;
-  font-size: $typography-fontSize-base;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+// body {
+//   font-family: $typography-fontFamily-main;
+//   font-size: $typography-fontSize-base;
+//   line-height: 1.5;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
 
-  letter-spacing: 0.015em;
+//   letter-spacing: 0.015em;
 
-  color: $color-text-base;
-  background-color: $color-bg-base;
-}
+//   color: $color-text-base;
+//   background-color: $color-bg-base;
+// }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+// a {
+//   color: inherit;
+//   text-decoration: none;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-weight: inherit;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin: 0;
+//   font-weight: inherit;
+// }
 
-p {
-  margin: 0;
-}
+// p {
+//   margin: 0;
+// }

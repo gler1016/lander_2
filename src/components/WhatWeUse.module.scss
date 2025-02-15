@@ -1,0 +1,107 @@
+.section {
+    padding: 2rem 1rem;
+    background-color: #F5F5F5;
+  
+    .header {
+      font-family: ui-monospace, monospace;
+      font-weight: normal;
+      color: #272727;
+      font-size: 15px;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+  
+    .title {
+      font-weight: 700;
+      line-height: 1.1;
+      color: #272727;
+      font-size: 24px;
+      line-height: 22px;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+  
+    .description {
+      color: #272727;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+      text-align: center;
+    }
+  
+    .techGrid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+  
+      .techItem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+  
+        &.column {
+          flex-direction: column;
+          margin-bottom: 0.5rem;
+        }
+  
+        &.withGap {
+          gap: 0.5rem;
+        }
+  
+        .icon {
+          &.tailwind {
+            height: 2rem;
+            width: auto;
+          }
+  
+          &.react {
+            height: 2.5rem;
+            width: auto;
+          }
+  
+          &.jamstack {
+            height: 2rem;
+            width: auto;
+          }
+  
+          &.nodejs {
+            height: 6rem;
+            width: auto;
+          }
+  
+          &.aws {
+            height: 4rem;
+            width: auto;
+          }
+  
+          &.graphql {
+            height: 3rem;
+            width: auto;
+          }
+        }
+  
+        .label {
+          color: #272727;
+          line-height: 22px;
+  
+          &.bold {
+            font-weight: 700;
+          }
+  
+          &.normal {
+            font-weight: normal;
+          }
+  
+          &.large {
+            font-size: 22px;
+          }
+  
+          &.medium {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }

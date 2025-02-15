@@ -1,29 +1,30 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../@content/assets/images/TheDevCasa_Logo@2x.png'
+import styles from './Footer.module.scss';
+import logo from '../@content/assets/images/TheDevCasa_Logo@2x.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F5F5F5] py-8 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-4 gap-8">
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.grid}>
           {/* TheDevCasa Column */}
-          <div>
-            <h3 className="text-[#13678A] font-semibold mb-2 text-[18px]">TheDevCasa</h3>
-            <ul className="space-y-3">
+          <div className={styles.column}>
+            <h3 className={styles.title}>TheDevCasa</h3>
+            <ul className={styles.list}>
               <li>
-                <Link href="/about" className="text-[18px] text-[#272727] font-normal font-mono hover:text-gray-600">
+                <Link href="/about" className={`${styles.link} ${styles.mono}`}>
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="text-[18px] text-[#272727] font-normal hover:text-gray-600">
+                <Link href="/work" className={styles.link}>
                   Work
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-[18px] text-[#272727] font-normal  hover:text-gray-600">
+                <Link href="/pricing" className={styles.link}>
                   Pricing
                 </Link>
               </li>
@@ -31,26 +32,26 @@ const Footer = () => {
           </div>
 
           {/* Legal Column */}
-          <div>
-            <h3 className="text-[#13678A] font-semibold mb-2 text-[18px]">Legal</h3>
-            <ul className="space-y-3">
+          <div className={styles.column}>
+            <h3 className={styles.title}>Legal</h3>
+            <ul className={styles.list}>
               <li>
-                <Link href="/privacy" className="text-[18px] text-[#272727]  font-normal hover:text-gray-600">
+                <Link href="/privacy" className={styles.link}>
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/legal" className="text-[18px] text-[#272727] font-normal hover:text-gray-600">
+                <Link href="/legal" className={styles.link}>
                   Legal Information
                 </Link>
               </li>
               <li>
-                <Link href="/cookies" className="text-[18px] text-[#272727] font-normal hover:text-gray-600">
+                <Link href="/cookies" className={styles.link}>
                   Cookies
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className=" text-[18px] text-[#272727] font-normalhover:text-gray-600">
+                <Link href="/contact" className={styles.link}>
                   Contact
                 </Link>
               </li>
@@ -61,16 +62,16 @@ const Footer = () => {
           <div></div>
 
           {/* Logo and Copyright */}
-          <div className="flex flex-row items-center justify-between">
-            <div className="text-gray-400">
+          <div className={styles.logoSection}>
+            <div className={styles.copyright}>
               TheDevCasa 2024 ©
             </div>
             <Image
-              src={logo} // Make sure to update this path to your actual logo path
+              src={logo}
               alt="TheDevCasa Logo"
               width={60}
               height={60}
-              className=""
+              className={styles.logo}
             />
           </div>
         </div>

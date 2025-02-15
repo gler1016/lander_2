@@ -1,76 +1,94 @@
 import React from 'react';
-import { ChevronRight, Code, Lightbulb, FolderOpen } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import styles from './WhyChooseUs.module.scss';
+import box from '../@content/assets/images/Group 730.svg';
+import bulb from '../@content/assets/images/Group 734.svg';
+import wallet from '../@content/assets/images/Group 732.svg';
+
 
 const WhyChooseUs = () => {
   return (
-    <div className=" w-full px-16 py-8 bg-white">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div className={styles.whyChooseUs}>
+      <div className={styles.grid}>
         {/* Left Column */}
-        <div className="space-y-6">
-          <div className="text-gray-600 text-sm tracking-wide">// WHY CHOOSE US</div>
+        <div className={styles.leftColumn}>
+          <div className={styles.subtitle}>// WHY CHOOSE US</div>
           
-          <h2 className="text-3xl font-bold text-gray-900 leading-tight">
-            Why Businesses Trust Us to Power Their Digital Transformation
+          <h2 className={styles.title}>
+            Why Businesses Trust Us to <br /> Power Their Digital Transformation
           </h2>
           
-          <p className="text-gray-600 leading-relaxed">
-            We deliver more than just a website. We build scalable, high-performance systems that provide measurable results for your business.
+          <p className={styles.description}>
+            We deliver more than just a website. We build scalable, <br /> high-performance systems that provide measurable <br /> results for your business.
           </p>
           
-          <button className="inline-flex items-center px-6 py-3 bg-emerald-400 text-white rounded-full hover:bg-emerald-500 transition-colors">
+          <button className={styles.button}>
             Let's talk
-            <ChevronRight className="ml-2 h-4 w-4" />
+            <ChevronRight className={styles.icon} />
           </button>
         </div>
 
         {/* Right Column */}
-        <div className="space-y-8">
+        <div className={styles.rightColumn}>
           {/* Framework Card */}
-          <div className="flex gap-4">
-            <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
-                <Code className="h-6 w-6 text-blue-500" />
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <div className={styles.iconContainer}>
+                <Image
+                  src={box}
+                  alt='box'
+                  className={styles.icon}
+                />
               </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className={styles.cardTitle}>
                 Proven development frameworks
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+            </div>
+            <div>
+              <p className={styles.cardDescription}>
                 We use industry-standard technologies that ensure your solutions are built to grow with your business.
               </p>
             </div>
           </div>
 
           {/* Solutions Card */}
-          <div className="flex gap-4">
-            <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
-                <Lightbulb className="h-6 w-6 text-blue-500" />
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <div className={styles.iconContainer}>
+                <Image
+                  src={bulb}
+                  alt='bulb'
+                  className={styles.icon}
+                />
               </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className={styles.cardTitle}>
                 Tailored, custom-built solutions
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+            </div>
+            <div>
+              <p className={styles.cardDescription}>
                 We design and develop systems specifically for your business, ensuring they meet your unique needs.
               </p>
             </div>
           </div>
 
           {/* Pricing Card */}
-          <div className="flex gap-4">
-            <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
-                <FolderOpen className="h-6 w-6 text-blue-500" />
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <div className={styles.iconContainer}>
+                <Image
+                  src={wallet}
+                  alt='wallet'
+                  className={styles.icon}
+                />
               </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className={styles.cardTitle}>
                 Competitive pricing
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+            </div>
+            <div>
+              <p className={styles.cardDescription}>
                 We offer cost-effective solutions that deliver premium results, providing value without breaking your budget.
               </p>
             </div>

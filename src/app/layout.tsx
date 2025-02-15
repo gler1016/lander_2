@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className={cn(variableClassNames)}>
         <ThemeProvider>
           {children}
-          <Footer />
+        
         </ThemeProvider>
       </body>
     </html>
