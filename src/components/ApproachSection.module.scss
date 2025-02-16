@@ -1,6 +1,6 @@
 .approachSection {
     width: 100%;
-    padding: 3.5rem 4rem;
+    padding: 6rem 8rem;
     position: relative;
     overflow: hidden;
     background-color: white;
@@ -8,24 +8,24 @@
     .gridBackground {
       position: absolute;
       inset: 0;
-      left: 200px;
-      top: 60px;
+      left: 880px;
+      top: 240px;
       z-index: 20;
-      height: 270px;
-      width: 120px;
+      height: 1100px;
+      width: 480px;
       background-image: 
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
-      background-size: 80px 80px;
+      background-size: 45px 45px;
       opacity: 0.5;
     }
   
     .radialGradient1 {
       position: absolute;
       right: 4rem;
-      bottom: 2.5rem;
+      bottom: 1.5rem;
       width: 800px;
-      height: 800px;
+      height: 700px;
       opacity: 0.3;
       z-index: 20;
       background: radial-gradient(circle, #45C5AF 0%, transparent 70%);
@@ -33,10 +33,10 @@
   
     .radialGradient2 {
       position: absolute;
-      right: 4rem;
-      top: 35px;
-      width: 800px;
-      height: 800px;
+      right: 5rem;
+      top: 250px;
+      width: 720px;
+      height: 650px;
       opacity: 0.3;
       z-index: 20;
       background: radial-gradient(circle, #45C5AF 0%, transparent 70%);
@@ -64,13 +64,15 @@
         text-align: center;
         font-weight: 700;
         color: #272727;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
       }
   
       .stepsContainer {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        border: 2px solid #f3f4f6;
+        border-radius: 1rem;
+
       }
     }
   }
@@ -78,13 +80,16 @@
   .step {
     background-color: white;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 5.5rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    border: 1px solid #f3f4f6;
+    border-top: 2px solid #f3f4f6;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
     position: relative;
   
     &.lastStep {
-      padding-bottom: 5rem;
+      padding-bottom: 16rem;
     }
   
     .stepLabel {
@@ -98,25 +103,25 @@
     .stepTitle {
       font-weight: 700;
       color: #272727;
-      font-size: 20px;
+      font-size: 24px;
       line-height: 1.2;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
   
     .stepDescription {
       color: #272727;
       font-size: 16px;
-      line-height: 22px;
+      line-height: 1.2;
       font-weight: normal;
     }
   }
   
   .placeholderBox {
     position: absolute;
-    right: 94px;
-    bottom: 56px;
-    width: 60px;
-    height: 84px;
+    right: 340px;
+    bottom: 180px;
+    width: 240px;
+    height: 340px;
     background-color: white;
     border-radius: 0.75rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);

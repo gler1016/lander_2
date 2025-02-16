@@ -1,0 +1,81 @@
+// FAQSection.module.scss
+.faqSection {
+    padding: 2rem 14rem;
+  
+    .header {
+      margin-bottom: 1.5rem;
+  
+      .label {
+        font-family: monospace;
+        font-weight: normal;
+        color: #272727;
+        font-size: 15px;
+        margin-bottom: 0.5rem;
+      }
+  
+      .title {
+        font-weight: bold;
+        line-height: 1.1;
+        color: #272727;
+        font-size: 24px;
+        margin-bottom: 1.5rem;
+      }
+    }
+  
+    .faqList {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+  
+      .faqItem {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+  
+        .question {
+          color: #8F8F8F;
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 0.3rem;
+        }
+  
+        .answer {
+          color: #272727;
+          line-height: 1.3;
+          max-width: 75%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  
+    .bottomCta {
+      margin-top: 1.5rem;
+  
+      p {
+        color: #8F8F8F;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+      }
+  
+      button {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 2rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 9999px;
+        color: #272727;
+        font-weight: 500;
+        transition: background-color 0.2s;
+  
+        &:hover {
+          background-color: #f9fafb;
+        }
+  
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }

@@ -1,7 +1,8 @@
 .footer {
     background-color: #F5F5F5;
-    padding-top: 2rem;
+    padding-top: 3rem;
     padding-bottom: 5rem;
+    position: relative;
   
     .container {
       max-width: 80rem; // 1280px
@@ -56,13 +57,18 @@
     .logoSection {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: start;
+      gap: 2rem;
       justify-content: space-between;
   
       .copyright {
         color: #8F8F8F;
       }
   
-      
+      .logo{
+        position: absolute;
+        right: 200px;
+        top: 20px;
+      }
     }
   }

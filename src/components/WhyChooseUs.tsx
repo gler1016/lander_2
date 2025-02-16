@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
           </p>
           
           <button className={styles.button}>
-            Let's talk
+            <p className={styles.para}>Let's talk</p>
             <ChevronRight className={styles.icon} />
           </button>
         </div>
@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
             </div>
             <div>
               <p className={styles.cardDescription}>
-                We use industry-standard technologies that ensure your solutions are built to grow with your business.
+                We use industry-standard technologies that ensure your <br /> solutions are built to grow with your business.
               </p>
             </div>
           </div>
@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
             </div>
             <div>
               <p className={styles.cardDescription}>
-                We design and develop systems specifically for your business, ensuring they meet your unique needs.
+                We design and develop systems specifically for your<br />business, ensuring they meet your unique needs.
               </p>
             </div>
           </div>
@@ -89,7 +89,7 @@ const WhyChooseUs = () => {
             </div>
             <div>
               <p className={styles.cardDescription}>
-                We offer cost-effective solutions that deliver premium results, providing value without breaking your budget.
+                We offer cost-effective solutions that deliver premium <br />results, providing value without breaking your budget.
               </p>
             </div>
           </div>

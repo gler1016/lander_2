@@ -1,4 +1,6 @@
+// FAQSection.tsx
 import React from 'react';
+import styles from './FAQSection.module.scss';
 
 interface FAQ {
   question: string;
@@ -38,41 +40,40 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className=" px-20 py-8">
+    <div className={styles.faqSection}>
       {/* Header */}
-      <div className="mb-6">
-        <div className="font-mono font-normal text-[#272727] text-[15px] mb-2">// FAQs</div>
-        <h2 className="font-bold leading-tight text-[#272727]  text-[24px]/22 mb-2">Your questions, our answers</h2>
+      <div className={styles.header}>
+        <div className={styles.label}>// FAQs</div>
+        <h2 className={styles.title}>Your questions, our answers</h2>
       </div>
 
       {/* FAQ List */}
-      <div className="space-y-8">
+      <div className={styles.faqList}>
         {faqs.map((faq, index) => (
-          <div key={index} className="space-y-2">
-            <h3 className="text-[#8F8F8F] text-[15px] font-medium mb-2">{faq.question}</h3>
-            <p className="text-gray-600 leading-relaxed max-w-[70%] mb-4">{faq.answer}</p>
+          <div key={index} className={styles.faqItem}>
+            <h3 className={styles.question}>{faq.question}</h3>
+            <p className={styles.answer}>{faq.answer}</p>
           </div>
         ))}
       </div>
 
       {/* Bottom CTA */}
-      <div className="mt-6">
-        <p className="text-gray-500 mb-2">Have a specific question? Get in touch below</p>
-        <button className="inline-flex items-center px-4 py-1 border border-gray-200 rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
+      <div className={styles.bottomCta}>
+        <p>Have a specific question? Get in touch below</p>
+        <button>
           Schedule a consultation
           <svg
-                className="w-5 h-5 ml-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
         </button>
       </div>
     </div>

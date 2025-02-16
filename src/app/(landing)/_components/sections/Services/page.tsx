@@ -14,6 +14,7 @@ import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import styles from './page.module.scss';
 import Footer from '@/components/Footer';
+import LanguageSelector from '@/components/LanguageSelector';
 
 const Services = () => {
   return (
@@ -24,8 +25,8 @@ const Services = () => {
         <Image 
           src={logo}
           alt='logo'
-          height={89}
-          width={83}
+          height={85}
+          width={80}
         />
       </div>
 
@@ -33,7 +34,8 @@ const Services = () => {
       <nav className={styles.navbar}>
         <div className={styles.navContent}>
           <ThemeToggle />
-          <span className={styles.navLink}>EN</span>
+          {/* <span className={styles.navLink}>EN</span> */}
+          <LanguageSelector />
           <span className={styles.navLink}>About</span>
           <span className={styles.navLink}>Work</span>
           <span className={styles.navLink}>Pricing</span>
@@ -123,8 +125,8 @@ const Services = () => {
     <ApproachSection />
     <WhatWeUse />
     <Work />
-    {/*<PricingSection />
-    <FAQSection /> */}
+    <PricingSection />
+    <FAQSection />
     <Footer />
   </>
   );

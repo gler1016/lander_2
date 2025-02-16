@@ -1,15 +1,15 @@
 .section {
-    padding: 4.5rem 4rem;
+    padding: 6rem 14rem;
     position: relative;
   
     .gridBackground {
       position: absolute;
       inset: 0;
-      left: 240px;
+      left: 840px;
       top: 30px;
       z-index: 10;
-      height: 120px;
-      width: 120px;
+      height: 500px;
+      width: 480px;
       background-image: 
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
@@ -27,25 +27,24 @@
   
     .title {
       font-weight: 700;
-      line-height: 1.1;
+      line-height: 1.3;
       color: #272727;
-      font-size: 24px;
-      line-height: 22px;
-      margin-bottom: 0.5rem;
+      font-size: 25px;
+      margin-bottom: 0.8rem;
     }
   
     .description {
       color: #272727;
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 15px;
+      line-height: 1.3;
       font-weight: normal;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
   
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 0.3rem;
       z-index: 40;
       position: relative;
   
@@ -62,7 +61,7 @@
       border: 1px solid #e5e7eb;
       border-radius: 0.5rem;
       height: 15rem;
-      width: 15rem;
+      width: 14rem;
       padding: 0.5rem;
       aspect-ratio: 1;
       display: flex;
@@ -71,6 +70,7 @@
       justify-content: center;
       text-align: center;
       cursor: pointer;
+      background: #fff;
       transition: border-color 0.2s ease;
   
       &:hover {
