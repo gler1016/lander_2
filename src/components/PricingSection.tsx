@@ -159,7 +159,7 @@ const PricingSection = () => {
 
       {/* Bottom CTA */}
       <div className="text-center flex flex-col items-center">
-        <p className="text-[#272727] text-[15px] mb-2">
+        <p className="text-[#272727] text-[15px] mb-4">
           Can't find what you're looking for? Schedule a call with us today.
         </p>
         <button className="bg-white border border-gray-200 text-gray-800 py-1 px-2 rounded-full hover:bg-gray-50 transition-colors flex flex-row items-center justify-center">

@@ -1,0 +1,244 @@
+// _pricing.scss
+
+// Variables
+$colors: (
+  'primary': #45C5AF,
+  'secondary': #13678A,
+  'text-primary': #272727,
+  'text-secondary': #8A8A8A,
+  'bg-light': #F5F5F5,
+  'white': #fff
+);
+
+$breakpoints: (
+  'md': 768px
+);
+
+// Mixins
+@mixin md {
+  @media (min-width: map-get($breakpoints, 'md')) {
+    @content;
+  }
+}
+
+// Pricing Section Styles
+.pricing-section {
+  background-color: map-get($colors, 'bg-light');
+  padding: 1rem 4.5rem;
+
+  &__header {
+    text-align: left;
+    margin-bottom: 2rem;
+
+    &-tag {
+      font-family: monospace;
+      font-weight: normal;
+      color: map-get($colors, 'text-primary');
+      font-size: 0.9375rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &-title {
+      font-weight: 700;
+      line-height: 1.1;
+      color: map-get($colors, 'text-primary');
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// Card Styles
+.pricing-card {
+  position: relative;
+  padding: 0.75rem;
+  border-radius: 1.5rem;
+  background-color: map-get($colors, 'white');
+  border: 1px solid #e5e7eb;
+
+  &--popular {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    .popular-badge {
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: map-get($colors, 'secondary');
+      color: map-get($colors, 'white');
+      padding: 0.25rem 2rem;
+      border-radius: 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__header {
+    margin-bottom: 0.5rem;
+
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    &-type {
+      font-family: monospace;
+      font-weight: normal;
+      color: map-get($colors, 'text-primary');
+      font-size: 0.9375rem;
+    }
+
+    &-status {
+      display: flex;
+      align-items: center;
+
+      &--available {
+        color: #34D399;
+      }
+
+      &--limited {
+        color: #F59E0B;
+      }
+
+      &-dot {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+        background-color: currentColor;
+      }
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    &-description {
+      color: map-get($colors, 'text-primary');
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    &-amount {
+      font-size: 3.25rem;
+      font-weight: normal;
+    }
+
+    &-period {
+      color: #6B7280;
+      margin-left: 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  &__features {
+    margin-bottom: 1rem;
+
+    &-title {
+      color: map-get($colors, 'text-primary');
+      font-size: 0.9375rem;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      color: map-get($colors, 'text-secondary');
+      font-size: 0.75rem;
+
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    color: map-get($colors, 'white');
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &--primary {
+      background-color: map-get($colors, 'primary');
+    }
+
+    &--secondary {
+      background-color: map-get($colors, 'secondary');
+    }
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-left: 1rem;
+    }
+  }
+}
+
+// Bottom CTA Styles
+.bottom-cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    color: map-get($colors, 'text-primary');
+    font-size: 0.9375rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    background-color: map-get($colors, 'white');
+    border: 1px solid #e5e7eb;
+    color: #4B5563;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #F9FAFB;
+    }
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-left: 1rem;
+    }
+  }
+}
