@@ -10,17 +10,16 @@
       padding: 0.5rem;
       font-size: 12px;
       color: #272727;
-      border: 0.2px solid #F2F2F2 ;
       border-radius: 50%;
       width: 40px;
       height: 40px;
       justify-content: center;
       cursor: pointer;
       transition: all 0.2s ease;
+      
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   
-      &:hover {
-        background-color: rgba(#272727, 0.05);
-      }
+      
   
       .arrow {
         transition: transform 0.2s ease;
@@ -71,5 +70,13 @@
   
         
       }
+    }
+
+    .lanDark{
+      background-color: #012030;
+      color: #FFFFFF;
+    }
+    .lanWhite{
+      background: rgba(255, 255, 255, 0.95);
     }
   }

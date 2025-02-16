@@ -1,6 +1,7 @@
 // LanguageSelector.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './LanguageSelector.module.scss';
+import { useTheme } from '@/contexts/ThemeContext';
 
 interface Language {
   code: string;
@@ -10,6 +11,8 @@ const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<Language>({ code: 'EN' });
   const dropdownRef = useRef<HTMLDivElement>(null);
+    const { theme, toggleTheme } = useTheme();
+  
 
   const languages: Language[] = [
     { code: 'EN' },
@@ -38,7 +41,7 @@ const LanguageSelector = () => {
   return (
     <div className={styles.languageSelector} ref={dropdownRef}>
       <button 
-        className={styles.trigger}
+        className={`${styles.trigger} ${theme === "dark" ? styles.lanDark : styles.lanWhite}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {selectedLanguage.code}

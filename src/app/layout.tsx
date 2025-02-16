@@ -17,8 +17,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn(variableClassNames)}>
         <ThemeProvider>
-          {children}
-        
+          {children}    
         </ThemeProvider>
       </body>
     </html>

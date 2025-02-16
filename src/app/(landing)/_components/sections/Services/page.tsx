@@ -15,11 +15,15 @@ import FAQSection from '@/components/FAQSection';
 import styles from './page.module.scss';
 import Footer from '@/components/Footer';
 import LanguageSelector from '@/components/LanguageSelector';
+import { useTheme } from '@/contexts/ThemeContext';
+import { log } from 'console';
 
 const Services = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <>
-    <div className={styles.container}>
+    <div className={`${styles.container} ${theme === "dark" ? styles.conDark : ''}`}>
       {/* Logo */}
       <div className={styles.logo}>
         <Image 
@@ -31,14 +35,14 @@ const Services = () => {
       </div>
 
       {/* Fixed Navbar */}
-      <nav className={styles.navbar}>
+      <nav className={`${styles.navbar} ${theme === "dark" ? styles.navDark : styles.navWhite}`}>
         <div className={styles.navContent}>
           <ThemeToggle />
           {/* <span className={styles.navLink}>EN</span> */}
           <LanguageSelector />
-          <span className={styles.navLink}>About</span>
-          <span className={styles.navLink}>Work</span>
-          <span className={styles.navLink}>Pricing</span>
+          <span className={`${styles.navLink} ${theme === "dark" ? styles.linkDark : ''}`}>About</span>
+          <span className={`${styles.navLink} ${theme === "dark" ? styles.linkDark : ''}`}>Work</span>
+          <span className={`${styles.navLink} ${theme === "dark" ? styles.linkDark : ''}`}>Pricing</span>
           <button className={styles.getStartedBtn}>
             <div className={styles.arrowCircle}>
               <svg
@@ -118,7 +122,7 @@ const Services = () => {
       </main>
 
       {/* Bottom Blob */}
-      <div className={styles.blob} />
+      <div className={`${styles.blob} ${theme === "dark" ? styles.navDark : ''}`} />
     </div>
     <ServicesSection />
     <WhyChooseUs />

@@ -5,6 +5,8 @@ $primary-color: #45C5AF;
 $secondary-color: #13678A;
 $text-color: #272727;
 $gray-500: #6B7280;
+$dark-color1: #130D24;
+$dark-color2: #13678A;
 
 .container {
   min-height: 100vh;
@@ -12,6 +14,10 @@ $gray-500: #6B7280;
   padding: 30px 155px;
   position: relative;
   overflow: hidden;
+}
+
+.conDark {
+  background: linear-gradient(to right, #130D24, #13678A);
 }
 
 .logo {
@@ -26,10 +32,18 @@ $gray-500: #6B7280;
   top: 4rem;
   right: 9rem;
   z-index: 50;
-  background-color: white;
   border-radius: 9999px;
   padding: 0.125rem 1.25rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+
+}
+
+.navDark {
+  background-color: #012030;
+}
+.navWhite {
+  background-color: white;
 }
 
 .navContent {
@@ -44,8 +58,14 @@ $gray-500: #6B7280;
   color: $gray-500;
 }
 
+.linkDark {
+  color: white;
+}
+
+
 .getStartedBtn {
   display: flex;
+  flex-direction: row;
   gap: 0.5rem;
 }
 
@@ -162,3 +182,4 @@ $gray-500: #6B7280;
     rgba(69, 197, 175, 0) 70%
   );
 }
+
